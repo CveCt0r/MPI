@@ -1,4 +1,4 @@
-from gen import generare
+from Randomizari import generare
 def bubble(x):
     n=len(x)-1
     comp=0
@@ -63,8 +63,6 @@ def partitie(x,s,d):
     return j
 
 def merge(x,s,d):
-    comp=0
-    inter=0
     if s<d:
         m=(s+d)//2
         x=merge(x,s,m)
@@ -117,6 +115,10 @@ print 'numar elemente', j
 #bubble(x)
 #insertion(x)
 #selection(x)
-quick(generare(j),0,len(x)-1)
+#quick(generare(j),0,len(x)-1)
 #merge(x,0,len(x)-1)
 #countingsort(x,max(x))
+suma=0
+for i in range(100):
+    suma+=i
+print suma
