@@ -118,7 +118,3 @@ print 'numar elemente', j
 #quick(generare(j),0,len(x)-1)
 #merge(x,0,len(x)-1)
 #countingsort(x,max(x))
-suma=0
-for i in range(100):
-    suma+=i
-print suma
