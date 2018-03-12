@@ -1,44 +1,32 @@
 from Randomizari import generare
 def bubble(x):
     n=len(x)-1
-    comp=0
-    intersch=0
     for i in range(n):
         for j in range(1,n+1):
-            comp+=1
             if x[i]>x[j]:
-                intersch+=1
                 x[i],x[j]=x[j],x[i]
+    #return x        
     #print 'comparari= ',comp
     #print 'interschimbari= ', intersch
     #return intersch
 def selection(x):
-    comp=0
-    inter=0
     for i in range(len(x)):
         k=i
         for j in range(i,len(x)):
-            comp+=1
             if x[j]<x[k]:
                 k=j
             if i!=k:
-                inter+=1
                 x[i],x[k]=x[k],x[i]
-
 #    print 'comparari',comp,'interschibmari', inter
     return comp,inter
 def insertion(x):
-    comp=0
-    inter=0
     for i in range(1,len(x)):
         aux=x[i]
         j=i-1
         while j>=0 and aux<x[j]:
-            comp+=2
             x[j+1]=x[j]
             j-=1
         x[j+1]=aux
-        inter+=1
 #    print 'comparari',comp,'interschibmari', inter
     #return x
 def quick(x,s,d):
